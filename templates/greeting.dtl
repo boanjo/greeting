@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Pond Control - Oxelgatan 7</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
+  </head>
+  <body>
+    <p>
+      Status from: {{ time }}
+    </p>
+    <p>
+      Temperature: {{ temp }}&deg;C<br>
+      Rain: {{ rain }}mm<br>
+      Water:<br>
+    </p>
+    <ul>
+      <li>Level: {{ level }}mm</li>
+      <li>Flow: {{ flow }}liters</li>
+      <li>State: {{ state }}</li>
+    </ul>
+    
+    <form method="POST">
+      <p>Amount: <input type="text" value={{def_feed_amount}} name="feed_amount"></p>
+      <input type="submit" value="feed">
+    </form>
+  </body>
+</html>
